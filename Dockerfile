@@ -57,3 +57,4 @@ WORKDIR workspace
 RUN python main.py --dry-run
 
 ENTRYPOINT [ "python", "main.py" ]
+CMD [ "--timeout", "20000" ]
