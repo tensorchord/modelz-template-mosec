@@ -11,7 +11,7 @@ RUN apt update && \
     apt install -y --no-install-recommends \
         wget \
         ca-certificates && \
-    rm -rf /var/lib/apt/litst/*
+    rm -rf /var/lib/apt/lists/*
 
 RUN set -x && \
     UNAME_M="$(uname -m)" && \
