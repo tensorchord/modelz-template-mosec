@@ -7,6 +7,12 @@ ENV PATH /opt/conda/bin:$PATH
 
 ARG CONDA_VERSION=py310_22.11.1-1
 
+RUN apt update && \
+    apt install -y --no-install-recommends \
+        wget \
+        ca-certificates && \
+    rm -rf /var/lib/apt/lists/*
+
 RUN set -x && \
     UNAME_M="$(uname -m)" && \
     if [ "${UNAME_M}" = "x86_64" ]; then \
