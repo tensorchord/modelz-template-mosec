@@ -1,4 +1,4 @@
-ARG base=nvidia/cuda:11.6.2-cudnn8-devel-ubuntu20.04
+ARG base=nvidia/cuda:11.6.2-cudnn8-runtime-ubuntu20.04
 
 FROM ${base}
 
