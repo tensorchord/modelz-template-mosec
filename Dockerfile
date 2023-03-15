@@ -5,6 +5,9 @@ FROM ${base}
 ENV DEBIAN_FRONTEND=noninteractive LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
 ENV PATH /opt/conda/bin:$PATH
 
+ARG MOSEC_PORT=8080
+ENV MOSEC_PORT=${MOSEC_PORT}
+
 ARG CONDA_VERSION=py310_22.11.1-1
 
 RUN apt update && \
