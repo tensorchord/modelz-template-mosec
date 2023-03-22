@@ -17,4 +17,5 @@ def serving():
     basic()
     io.copy("main.py", "/")
     run(["python main.py --dry-run"])
+    runtime.environ(env={"HF_HUB_OFFLINE": "true"})
     config.entrypoint(["python", "main.py", "--timeout", "30000"])
