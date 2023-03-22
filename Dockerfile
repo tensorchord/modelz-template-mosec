@@ -65,6 +65,8 @@ WORKDIR workspace
 
 RUN python main.py --dry-run
 
+# disable huggingface update check (could be very slow)
 ENV HF_HUB_OFFLINE=true
+
 ENTRYPOINT [ "python", "main.py" ]
 CMD [ "--timeout", "20000" ]
