@@ -17,7 +17,6 @@ class StableDiffusion(MsgpackMixin, Worker):
         )
         device = "cuda" if torch.cuda.is_available() else "cpu"
         self.pipe = self.pipe.to(device)
-        self.example = ["useless example prompt"] * 4  # warmup (bs=4)
 
     def forward(self, data: List[str]) -> List[memoryview]:
         logger.debug("generate images for %s", data)
