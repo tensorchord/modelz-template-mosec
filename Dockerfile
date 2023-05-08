@@ -69,4 +69,5 @@ RUN python main.py --dry-run
 ENV HF_HUB_OFFLINE=true
 
 ENTRYPOINT [ "python", "main.py" ]
-CMD [ "--timeout", "20000" ]
+# Set inference timeout to 60s
+CMD [ "--timeout", "60000" ]
